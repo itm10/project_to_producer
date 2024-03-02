@@ -9,7 +9,7 @@ class IPRestrictedMiddleware:
 
     def __call__(self, request, *args, **kwargs):
         client_ip = request.META.get('REMOTE_ADDR')
-        print(client_ip)
+        print('clientss', client_ip)
 
         ip_addresses = IPAddresses.objects.values_list('ip', flat=True)
         print(ip_addresses)

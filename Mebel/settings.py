@@ -55,7 +55,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'main.middlewares.IPRestrictedMiddleware',
+    # 'main.middlewares.IPRestrictedMiddleware',
 ]
 
 ROOT_URLCONF = 'Mebel.urls'

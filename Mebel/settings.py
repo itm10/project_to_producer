@@ -92,7 +92,7 @@ WSGI_APPLICATION = 'Mebel.wsgi.application'
 # }
 
 DATABASES = {
-    'default': dj_database_url.parse('postgres://mebel_user:13Gj6mcx2MFqoSFDlaC7im0qavkDjUeo@dpg-cnh22oo21fec73abnso0-a.frankfurt-postgres.render.com/mebel')
+    'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
 }
 
 SWAGGER_SETTINGS = {

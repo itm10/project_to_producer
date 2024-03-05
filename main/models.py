@@ -17,6 +17,9 @@ class Category(models.Model):
     class Meta:
         verbose_name_plural = "Category"
 
+    def __str__(self):
+        return self.name
+
 
 class Product(models.Model):
     name = models.CharField(max_length=50)
@@ -24,6 +27,9 @@ class Product(models.Model):
     price = models.FloatField()
     color = models.CharField(max_length=30)
     category = models.ForeignKey(Category, on_delete=models.CASCADE, blank=True, null=True)
+
+    def __str__(self):
+        return self.name
 
 
 class Image(models.Model):

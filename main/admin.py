@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Product, Image, Category, Currency, IPAddresses
+from .models import Product, Image, Category, Currency
 
 
 class ProductImageInline(admin.TabularInline):
@@ -13,5 +13,5 @@ class ProductAdmin(admin.ModelAdmin):
     search_fields = ('User', 'ProductName')
 
 
-admin.site.register((Category, Currency, IPAddresses))
+admin.site.register((Category, Currency, Image))
 

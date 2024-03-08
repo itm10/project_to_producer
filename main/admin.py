@@ -4,7 +4,6 @@ from .models import Product, Image, Category, Currency
 
 class ProductImageInline(admin.TabularInline):
     model = Image
-    extra = 3
 
 
 @admin.register(Product)

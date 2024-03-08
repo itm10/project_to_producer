@@ -20,6 +20,8 @@ class Productserializers(serializers.ModelSerializer):
 
     def get_images(self, obj):
         images = obj.image_set.all()
+        print(obj)
+        print(images)
         return [image.image.url for image in images]
 
     def get_price_after_currency(self, obj):

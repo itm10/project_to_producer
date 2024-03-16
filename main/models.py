@@ -37,6 +37,9 @@ class Image(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     image = models.ImageField(upload_to='media/')
 
+    def __str__(self):
+        return f'{self.product.name} - {self.image.name}'
+
 
 class Currency(models.Model):
     price = models.FloatField(verbose_name='Currency')

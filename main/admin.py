@@ -9,7 +9,7 @@ class ProductImageInline(admin.TabularInline):
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
     inlines = [ProductImageInline]
-    search_fields = ('User', 'ProductName')
+    search_fields = ('name', 'description')
 
 
 admin.site.register((Category, Currency, Image))

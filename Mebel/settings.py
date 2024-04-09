@@ -162,7 +162,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-DEFENDER_REDIS_URL = 'redis://redis:6379/0'
+DEFENDER_REDIS_URL = 'redis://35.226.192.125:6379/0'
 
 
 STATIC_URL = 'static/'

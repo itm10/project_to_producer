@@ -1,5 +1,6 @@
 from os.path import splitext
 from django.db import models
+from django.contrib.auth import settings
 
 from django.template.defaultfilters import slugify
 
@@ -34,7 +35,7 @@ class Product(models.Model):
 
 class Image(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
-    image = models.ImageField(upload_to=slugify_upload)
+    image = models.ImageField(upload_to=settings.MEDIA_URL)
 
     def __str__(self):
         return f'{self.product.name} - {self.image.name}'

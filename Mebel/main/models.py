@@ -6,6 +6,7 @@ from django.template.defaultfilters import slugify
 
 def slugify_upload(instance, filename):
     folder = instance._meta.model_name
+    print(folder)
     name, ext = splitext(filename)
     name_t = slugify(name) or name
     return f"{folder}/{name_t}{ext}"
@@ -34,7 +35,7 @@ class Product(models.Model):
 
 class Image(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
-    image = models.ImageField(upload_to=slugify_upload)
+    image = models.ImageField(upload_to='media/')
 
     def __str__(self):
         return f'{self.product.name} - {self.image.name}'

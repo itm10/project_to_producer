@@ -17,8 +17,8 @@ services:
       - DJANGO_DB_PORT=$DB_PORT
     volumes:
       - .:/app
-      - static_volume:/home/itm1004/PycharmProjects/Mebel/static
-      - media_volume:/home/itm1004/PycharmProjects/Mebel/media
+      - static_volume:/home/itm1004/PycharmProjects/rd/static
+      - media_volume:/home/itm1004/PycharmProjects/rd/media
     depends_on:
       - db
       - redis

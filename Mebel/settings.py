@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['35.226.192.125']
+ALLOWED_HOSTS = ['35.235.127.166']
 
 
 # Application definition
@@ -162,7 +162,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-DEFENDER_REDIS_URL = 'redis://35.226.192.125:6379/0'
+DEFENDER_REDIS_URL = 'redis://35.235.127.166:6379/0'
 
 
 STATIC_URL = 'static/'

@@ -33,9 +33,3 @@ class ProductByCategory(GenericAPIView):
         else:
             return Response({"message": "Category not found"}, status=status.HTTP_404_NOT_FOUND)
 
-
-
-<<<<<<< HEAD
-=======
-
->>>>>>> 1d9f52e (Ready)

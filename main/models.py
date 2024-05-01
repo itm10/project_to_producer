@@ -48,17 +48,6 @@ class Currency(models.Model):
         verbose_name_plural = 'Currency'
 
 
-<<<<<<< HEAD
-class IPAddresses(models.Model):
-    ip = models.CharField(max_length=12)
-
-    class Meta:
-        verbose_name_plural = 'IPAddresses'
-
-=======
->>>>>>> 1d9f52e (Ready)
-
-
 
 
 

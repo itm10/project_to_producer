@@ -21,13 +21,8 @@ class Productserializers(serializers.ModelSerializer):
     def get_images(self, obj):
         images = obj.image_set.all()
         image_urls = [image.image.url for image in images]
-<<<<<<< HEAD
-        # final_url = [f'http://35.226.192.125{url}' for url in image_urls]
-        return image_urls
-=======
-        final_url = [f'http://127.0.0.1:8000{url}' for url in image_urls]
+        final_url = [f'http://35.239.47.144{url}' for url in image_urls]
         return final_url
->>>>>>> 1d9f52e (Ready)
 
     def get_price_after_currency(self, obj):
         currency_price = self.context.get('currency_price', 1)
@@ -38,6 +33,5 @@ class Productserializers(serializers.ModelSerializer):
     def to_representation(self, instance):
         representation = super().to_representation(instance)
         currency_price = self.context.get('currency_price', 1)
-
         representation['dollar'] = currency_price
         return representation

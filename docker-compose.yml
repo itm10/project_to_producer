@@ -4,7 +4,11 @@ services:
   django:
     build: .
     container_name: django
+<<<<<<< HEAD
     command: python manage.py runserver 0.0.0.0:8000
+=======
+    command: gunicorn --bind 0.0.0.0:8000 mebel.wsgi
+>>>>>>> 1d9f52e (Ready)
     ports:
       - '8000:8000'
     env_file:
@@ -17,8 +21,13 @@ services:
       - DJANGO_DB_PORT=$DB_PORT
     volumes:
       - .:/app
+<<<<<<< HEAD
       - static_volume:/home/itm1004/PycharmProjects/Mebel/static
       - media_volume:/home/itm1004/PycharmProjects/Mebel/media
+=======
+      - static_volume:/home/itm1004/PycharmProjects/mebel/static
+      - media_volume:/home/itm1004/PycharmProjects/mebel/media
+>>>>>>> 1d9f52e (Ready)
     depends_on:
       - db
       - redis
@@ -38,6 +47,10 @@ services:
       - POSTGRES_PORT=$DB_PORT
     volumes:
       - postgres_data:/var/lib/postgresql/data/
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1d9f52e (Ready)
   redis:
     image: redis:6-alpine
     volumes:
@@ -45,6 +58,23 @@ services:
     expose:
       - 6379
 
+<<<<<<< HEAD
+=======
+  nginx:
+    build: ./nginx
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "3"
+    volumes:
+      - static_volume:/home/user/project_to_mebel/static/
+      - media_volume:/home/user/project_to_mebel/media/
+    ports:
+      - "80:80"
+    depends_on:
+      - django
+
+>>>>>>> 1d9f52e (Ready)
 volumes:
   static_volume:
   media_volume:

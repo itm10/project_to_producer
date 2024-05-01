@@ -35,3 +35,7 @@ class ProductByCategory(GenericAPIView):
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1d9f52e (Ready)

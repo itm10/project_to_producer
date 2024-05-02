@@ -39,6 +39,7 @@ schema_view = get_schema_view(
 )
 
 urlpatterns = [
+    path('admin/defender/', include('defender.urls')),
     path('admin/', admin.site.urls),
     path('api/', include('main.urls')),
     path('swagger<format>/', schema_view.without_ui(cache_timeout=0), name='schema-json'),

@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-6+gjdma2jf8q_-m4c+w4zw(ii(mb!^0aczmyq_*dlk2#!#n&eq
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['104.197.215.50']
+ALLOWED_HOSTS = ['34.41.67.191']
 
 
 # Application definition
@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'corsheaders',
+    'defender',
 
     'rest_framework',
     'drf_yasg',
@@ -58,6 +59,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'defender.middleware.FailedLoginMiddleware',
 ]
 
 ROOT_URLCONF = 'mebel.urls'
@@ -80,7 +82,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'mebel.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
@@ -156,6 +157,8 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
+
+DEFENDER_REDIS_URL = 'redis://34.41.67.191:6379/0'
 
 STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')

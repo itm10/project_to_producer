@@ -158,6 +158,17 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
+CACHES = {
+    'default': {
+        'BACKEND': 'redis_cache.cache.RedisCache',
+        'LOCATION': 'redis://34.41.67.191:6379/',
+        'OPTIONS': {
+            'PASSWORD': '1004',
+            'DB': 0,
+        }
+    }
+}
+
 DEFENDER_REDIS_URL = 'redis://34.41.67.191:6379/0'
 
 STATIC_URL = 'static/'

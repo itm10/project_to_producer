@@ -53,8 +53,8 @@ services:
         max-size: "10m"
         max-file: "3"
     volumes:
-      - static_volume:/home/user/project_to_producer/static/
-      - media_volume:/home/user/project_to_producer/media/
+      - static_volume:/var/tmp/project/static
+      - media_volume:/var/tmp/project/media
     ports:
       - "80:80"
     depends_on:

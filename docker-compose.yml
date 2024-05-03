@@ -18,8 +18,8 @@ services:
       - DJANGO_DB_PORT=$DB_PORT
     volumes:
       - .:/app
-      - static:/home/user/project_to_producer/static/
-      - media:/home/user/project_to_producer/media/
+      - ./static:/home/user/project_to_producer/static/
+      - ./media:/home/user/project_to_producer/media/
     depends_on:
       - db
       - redis
@@ -54,8 +54,8 @@ services:
         max-size: "10m"
         max-file: "3"
     volumes:
-      - static:/var/tmp/project/static
-      - media:/var/tmp/project/media
+      - ./static:/var/tmp/project/static
+      - ./media:/var/tmp/project/media
     ports:
       - "80:80"
     depends_on:

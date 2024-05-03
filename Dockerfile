@@ -10,11 +10,13 @@ COPY . .
 RUN sed -i 's/\r$//g' /app/entrypoint.sh
 RUN chmod +x /app/entrypoint.sh
 
+RUN pip install -r requirements.txt
+
 RUN python manage.py makemigrations
 RUN python manage.py migrate
 RUN python manage.py collectstatic --noinput
 
 
-RUN pip install -r requirements.txt
-
 ENTRYPOINT ["sh", "/app/entrypoint.sh"]
+
+CMD ["python", "manage.py", "migrate"]

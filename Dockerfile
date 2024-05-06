@@ -10,6 +10,4 @@ COPY . .
 RUN sed -i 's/\r$//g' /app/entrypoint.sh
 RUN chmod +x /app/entrypoint.sh
 
-#RUN python manage.py collectstatic --noinput
-
 ENTRYPOINT ["sh", "/app/entrypoint.sh"]

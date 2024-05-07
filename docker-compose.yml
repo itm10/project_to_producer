@@ -65,10 +65,10 @@ services:
 
   certbot:
     image: certbot/certbot:latest
-    command: certonly --webroot --webroot-path=/var/www/html --email ibrohim.tolipovv@gmail.com --agree-tos -d mebel.tolipovv.uz
+    command: certonly --standalone --email ibrohim.tolipovv@gmail.com --agree-tos -d mebel.tolipovv.uz
     volumes:
-      - certbot_www:/var/www/certbot/
-      - certbot_conf:/etc/letsencrypt/
+      - certbot_etc:/etc/letsencrypt
+      - certbot_var:/var/lib/letsencrypt
 
 volumes:
   static:

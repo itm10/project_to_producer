@@ -46,35 +46,22 @@ services:
     expose:
       - 6379
 
-  nginx:
-    build: ./nginx
-    logging:
-      options:
-        max-size: "10m"
-        max-file: "3"
-    ports:
-      - "80:80"
-      - "443:443"
-    volumes:
-      - ./static:/home/user/project_to_producer/static/
-      - ./media:/home/user/project_to_producer/media/
-      - nginx_conf:/etc/nginx/conf.d/
-      - certbot_www:/var/www/certbot/
-    depends_on:
-      - django
-
-  certbot:
-    image: certbot/certbot:latest
-    command: certonly --standalone --email ibrohim.tolipovv@gmail.com --agree-tos -d mebel.tolipovv.uz
-    volumes:
-      - certbot_etc:/etc/letsencrypt
-      - certbot_var:/var/lib/letsencrypt
+#  nginx:
+#    build: ./nginx
+#    logging:
+#      options:
+#        max-size: "10m"
+#        max-file: "3"
+#    ports:
+#      - "80:80"
+#    volumes:
+#      - ./static:/home/user/project_to_producer/static/
+#      - ./media:/home/user/project_to_producer/media/
+#    depends_on:
+#      - django
 
 volumes:
   static:
   media:
-  nginx_conf:
-  certbot_www:
-  certbot_conf:
   postgres_data:
   redis_data:

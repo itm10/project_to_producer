@@ -58,8 +58,8 @@ services:
     volumes:
       - ./static:/home/user/project_to_producer/static/
       - ./media:/home/user/project_to_producer/media/
-      - ./nginx/conf/:/etc/nginx/conf.d/:ro
-      - ./certbot/www/:/var/www/certbot/:ro
+      - ./nginx/conf/:/etc/nginx/conf.d/
+      - ./certbot/www/:/var/www/certbot/
     depends_on:
       - django
   certbot:

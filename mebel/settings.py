@@ -25,7 +25,7 @@ load_dotenv()
 SECRET_KEY = 'django-insecure-6+gjdma2jf8q_-m4c+w4zw(ii(mb!^0aczmyq_*dlk2#!#n&eq'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['mebel.tolipovv.uz', 'localhost']
 

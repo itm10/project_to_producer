@@ -29,7 +29,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['34.68.97.86', 'mebel.tolipovv.uz', 'localhost']
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -98,15 +97,18 @@ DATABASES = {
 }
 
 SWAGGER_SETTINGS = {
-   'SECURITY_DEFINITIONS': {
-      'Bearer': {
+    'SECURITY_DEFINITIONS': {
+        'Bearer': {
             'type': 'apiKey',
             'name': 'Authorization',
             'in': 'header'
-      }
-   }
+        },
+        'DEFAULT_SCHEME': 'http',
+        'SCHEMES': [
+            'http', 'https',
+        ],
+    }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
@@ -134,14 +136,13 @@ JAZZMIN_SETTINGS = {
 
     "topmenu_links": [
 
-        {"name": "Home",  "url": "admin:index", "permissions": ["auth.view_user"]},
+        {"name": "Home", "url": "admin:index", "permissions": ["auth.view_user"]},
         {"model": "auth.user"},
         {"model": "main.product"},
 
     ],
 
 }
-
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
@@ -153,7 +154,6 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/

@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-6+gjdma2jf8q_-m4c+w4zw(ii(mb!^0aczmyq_*dlk2#!#n&eq
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['34.68.97.86', 'mebel.tolipovv.uz']
+ALLOWED_HOSTS = ['34.68.97.86', 'mebel.tolipovv.uz', 'localhost']
 
 
 # Application definition
@@ -170,6 +170,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+CSRF_TRUSTED_ORIGINS = ['https://mebel.tolipovv.uz']
+
 CORS_ALLOWED_ORIGINS = (
     'http://localhost:5173',
+    'https://mebel.tolipovv.uz',
 )

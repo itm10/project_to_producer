@@ -170,6 +170,15 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+CORS_ALLOW_METHODS = [
+    'GET',
+    'POST',
+    'DELETE',
+    'PUT',
+    'PATCH',
+    'OPTIONS',
+]
+
 CSRF_TRUSTED_ORIGINS = ['https://mebel.tolipovv.uz']
 
 CORS_ALLOWED_ORIGINS = (

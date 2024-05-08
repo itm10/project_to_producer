@@ -102,12 +102,12 @@ SWAGGER_SETTINGS = {
             'type': 'apiKey',
             'name': 'Authorization',
             'in': 'header'
-        },
-        'DEFAULT_SCHEME': 'http',
-        'SCHEMES': [
-            'http', 'https',
-        ],
-    }
+        }
+    },
+    'DEFAULT_SCHEME': 'http',
+    'SCHEMES': [
+        'http', 'https',
+    ],
 }
 
 # Password validation

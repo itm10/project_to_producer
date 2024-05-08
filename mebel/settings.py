@@ -104,8 +104,8 @@ SWAGGER_SETTINGS = {
             'in': 'header'
         }
     },
-    "schemes": [
-        "https"
+    'schemes': [
+        'https', 'http'
     ],
 }
 

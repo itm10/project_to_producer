@@ -105,7 +105,7 @@ SWAGGER_SETTINGS = {
         }
     },
     "schemes": [
-        "http"
+        "https"
     ],
 }
 

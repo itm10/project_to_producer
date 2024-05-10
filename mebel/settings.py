@@ -145,6 +145,8 @@ JAZZMIN_SETTINGS = {
 
 }
 
+SECURE_SSL_REDIRECT = True
+
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
